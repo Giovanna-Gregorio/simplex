@@ -375,7 +375,7 @@ function criarForm(p_variaveis, p_restricoes) {
 
         }
 
-        $("#restricoesStatic").append("<p class='mt-5'><b><h3>X<sub>i</sub> &nbsp; ≥ &nbsp;0</h3></b></p><br>");
+        //$("#restricoesStatic").append("<p class='mt-5'><b><h3>X<sub>i</sub> &nbsp; ≥ &nbsp;0</h3></b></p><br>");
         $("#restricoesStatic").css('display','flex');
 
 		document.getElementById("form1").style.display = 'none';
@@ -619,7 +619,20 @@ function resolver() {
             solucao += elemento;
         }
     }
- 
+
+    var base = [];
+    var variaveisColuna = [];
+
+    for (let index = 1; index < matriz.length; index++) {
+        base.push(matriz[index][0]);
+    }
+
+    for (let index = 1; index < matriz[0].length - 1; index++) {
+        variaveisColuna.push(matriz[0][index]);    
+    }
+
+    var zero = variaveisColuna.filter(x => !base.includes(x));
+
     if(simplex_type == 'maximize') {
         var z = ((fracao.toFraction()) * (-1));
 	}
@@ -637,7 +650,7 @@ function resolver() {
 	else {
     	$('#box-btns-slider').css('display','flex');
         document.getElementById("btn4").style.display = 'block';
-        $('#resultado-final').append("<p id='solucaoFinal' class='mt-5'><b><h3>"+solucao+"</h3></b></p><br>");
+        $('#resultado-final').append("<p id='solucaoFinal' class='mt-5'><b><h3>"+solucao+"</h3></b></p><br><p><h3>Coeficiente ZERO: " + zero + "</h3></p>");
         $('#resultado-final').append($('#table-'+(table_id - 1 )));
         $('#box-table-final').css('display','flex');
         $('#tab').css('display','none');

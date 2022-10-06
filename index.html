@@ -17,7 +17,7 @@
             <div class="container-fluid">
                 <div class="row py-title-custom">
                     <div class="col-md-12 d-flex justify-content-center">
-                        <h2 class="h2">Calculadora Simplex</h2>
+                        <h2 class="h2">Simplex</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -38,11 +38,11 @@
                         </a> -->
                     </div>
                     <div class="col-md-6 d-flex justify-content-around">
-                        <a href="#solucaoFinal" class="js-scroll-trigger">
+                        <!-- <a href="#solucaoFinal" class="js-scroll-trigger">
                             <button type="button" class="btn btn-success js-scroll-trigger" id="btnSolucaoFinal" onclick="mostrarSolucaoFinal();" name="ok" value="ok">
                                 Ver Solução Final
                             </button>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
 
@@ -72,20 +72,20 @@
                     <div class="row">
                         <div class="offset-md-4 col-md-4 offset-md-4 d-flex justify-content-start text-center text-muted">
                             <div class="input-group ml-5 mr-5 py-3">
-                                <input type="number" id="in1" name="variaveis" value="" min="1" autocomplete="off" class="form-control" placeholder="Quantas variáveis?" autofocus aria-describedby="basic-addon2">
+                                <input type="number" id="in1" name="variaveis" value="" min="1" autocomplete="off" class="form-control" placeholder="Número de variáveis" autofocus aria-describedby="basic-addon2">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="offset-md-4 col-md-4 offset-md-4 d-flex justify-content-start text-center text-muted">
                             <div class="input-group ml-5 mr-5 py-3">
-                                <input type="number" id="in2" name="regras" value="" min="1" autocomplete="off" class="form-control" placeholder="Quantas restrições?" autofocus aria-describedby="basic-addon2">
+                                <input type="number" id="in2" name="regras" value="" min="1" autocomplete="off" class="form-control" placeholder="Número de restrições" autofocus aria-describedby="basic-addon2">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="offset-md-7 col-md-3 offset-md-2 d-flex justify-content-around">
-                            <button type="button" class="btn btn-primary" id="btn1" name="ok" value="ok" onClick="criarForm(variaveis.value,regras.value,)">
+                            <button type="button" class="btn btn-danger" id="btn1" name="ok" value="ok" onClick="criarForm(variaveis.value,regras.value,)">
                                 <a href="#in1" class="js-scroll-trigger">Avançar</a>
                             </button>
                         </div>
@@ -95,30 +95,28 @@
                 <form action="" method="post" name="form2" id="form2" style="display:block;">
 
                     <div id="aqui">
-                        <hr class="line-breaking">
+                        <!-- <hr class="line-breaking"> -->
                         <div class="row" style="display: none;">
                         </div>
                     </div>
 
                     <div class="row">
-
                         <div id="restricoesStatic" style="display: none;" class="offset-md-3 col-md-6 offset-md-3 my-4 input-group d-flex text-center text-muted">
 
                         </div>
-
                     </div>
 
                     <div class="container">
                         <div id="box-buttons-solve" class="row" style="display: none;">
                             <br>
                             <div class="col-md-6">
-                                <button type="reset" class="btn btn-success float-left ml-4" id="btn3" name="novo" value="Novo" onClick="atualizar()">
+                                <button type="reset" class="btn btn-secondary float-left ml-4" id="btn3" name="novo" value="Novo" onClick="atualizar()">
                                     Voltar
                                 </button>
                             </div>
 
                             <div class="col-md-6">
-                                <button type="button" class="btn btn-primary float-right mr-4" id="btn2" name="calc" value="Resolver" onClick="resolver()">
+                                <button type="button" class="btn btn-success float-right mr-4" id="btn2" name="calc" value="Resolver" onClick="resolver()">
                                     Resolver
                                 </button>
                             </div>
@@ -126,7 +124,7 @@
                     </div>
                 </form>
 
-                <hr id="hr-pos-box-buttons-solve" class="line-breaking" style="display: none;">
+                <!-- <hr id="hr-pos-box-buttons-solve" class="line-breaking" style="display: none;"> -->
 
                 <div id="box-table-final" class="row" style="display: none;">
                     <div class="offset-md-2 col-md-8 offset-md-2 d-flex justify-content-around">
