@@ -41,13 +41,14 @@ function calculaMaxMin(p_matriz_final, quantDec, bValues) {
             }
         }
         if(minPos === Number.POSITIVE_INFINITY ){
-            minPos = 0
+            minPos = Infinity
         }
         if(maxNeg === Number.NEGATIVE_INFINITY ){
-            maxNeg = 0
+            maxNeg = Infinity
         }
 
-        minMaxValues.push([(maxNeg + parseInt(bValues[k])) , (minPos + parseInt(bValues[k]))])
+        //minMaxValues.push([(maxNeg + parseInt(bValues[k])) , (minPos + parseInt(bValues[k]))])
+        minMaxValues.push([(Math.round(maxNeg)) , (Math.round(minPos))])
     }
 
     var senseMatriz = [];
